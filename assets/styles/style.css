@@ -1,0 +1,523 @@
+/* небольшая ремарка, я знаком с scss но в данном случае проект небольшой и я решил что css будет достаточно */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+input:focus{
+    outline: none;
+}
+section{
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.container{
+    max-width: 1212px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding: 0 16px;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+.button{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    letter-spacing: 0.192px;
+    border-radius: 4px;
+    background: #1A3E3E;
+    color: #FDFDFD;
+    padding: 16px 36px;
+    border: none;
+    display: inline-block;
+    height: fit-content;
+}
+.title{
+    margin-bottom: 40px;
+    color: #18121E;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%; /* 38.4px */
+}
+.suptitle{
+    color: #F2BE22;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 83.333% */
+    margin-bottom: 8px;
+    display: block;
+}
+.tac{
+    text-align: center;
+}
+p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+}
+
+
+
+
+
+
+.header{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 16px;
+    width: 100%;
+}
+.header__container{
+    display: flex;
+    align-items: center;
+}
+.header__navigation{
+    margin-left: auto;
+}
+.header__navigation__list{
+    display: flex;
+    color: #FDFDFD;
+    gap: 24px;
+    margin-right: 50px;
+}
+.header__button{
+    padding: 12px 24px;
+}
+
+
+
+
+
+
+
+
+
+
+.main-section{
+    background: url(/assets/images/main-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+.main-section .container{
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: flex-end;
+    height: 100%;
+    min-height: 985px;
+}
+.main-section__title{
+    color: #FDFDFD;
+    font-size: clamp(25px, 5vw, 50px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 75px */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.main-section__form{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(3px);
+    padding: 40px 42px;
+}
+.main-section__form{
+    display: flex;
+    gap: 24px;
+}
+.main-section__form__item{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc((100% - 74px - 213px) / 3);
+    position: relative;
+    color: #FDFDFD;
+}
+.main-section__form__item input{
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+.main-section__form__input{
+    border: 1px solid #E1E3E4;
+    padding: 14px 16px;
+    background: none;
+    border-radius: 8px;
+    line-height: 24px;
+}
+.main-section__form__button{
+    background-color: #FDFDFD;
+    color: #1A3E3E;
+}
+
+
+
+
+
+
+
+.about-hike__video{
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+    height: 400px;
+}
+.about-hike .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+.about-hike__media{
+    max-height: 526px;
+    height: 45vw;
+    width:  40.68vw;
+    max-width: 480px;
+    position: relative;
+}
+.about-hike__video{
+    border-radius: 24px;
+    display: block;
+}
+.video-wrapper{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.video-wrapper::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(/assets/images/play-button.svg) no-repeat;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+.video-wrapper.active::after{
+    display: none;
+}
+.about-hike__img{
+    border-radius: 24px;
+}
+.about-hike__text{
+    width: 49.15%;
+    max-width: 580px;
+}
+
+.about-hike__button{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+.programs{
+    background-color: #F3F5F4;
+}
+.programs .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+.programs__text{
+    width: 49.15vw;
+    max-width: 580px;
+}
+.programs__img{
+    display: block;
+    width: 43.22vw;
+    max-width: 510px;
+}
+.programs__list{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.programs__list li{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.programs__list li span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    color: #000;
+}
+.programs__button{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+.popular__item{
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+    max-width: 380px;
+}
+
+.popular__item__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.popular__item__info{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(3px);
+    width: 100%;
+    padding: 25px 32px;
+    color: #FDFDFD;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+.popular__item__info h3{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 28.8px */
+}
+.popular__item__info span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.popular__item__price{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    padding: 8px 16px;
+    min-width: max-content;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.30);
+}
+.center-button{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.popular__item__rating{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    color: #1A3E3E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 4px 0px 0px 4px;
+    background: rgba(253, 253, 253, 0.40);
+    backdrop-filter: blur(2px);
+    padding: 4px 8px;
+}
+
+
+
+
+
+
+
+.blog{
+    background-color: #F3F5F4;
+}
+.blog__swiper{
+    height: 648px;
+}
+.blog__item{
+    display: flex;
+    gap: 24px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #FDFDFD;
+    max-height: 312px;
+}
+.blog__item h3{
+    color: #18121E;
+    font-size: clamp(20px, 2vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133.333%
+}
+.blog__item__text{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 0;
+}
+.blog__item p {
+    color: #18121E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    max-height: 116px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.blog__item__footer{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    color: #1A3E3E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+}
+.blog__item__date{
+    color: #F2BE22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+}
+
+
+
+
+
+
+
+.impressions__items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.impressions__item{
+    display: block;
+}
+
+
+
+
+
+
+.mailing {
+    position: relative;
+    height: 98px;
+    padding: 0;
+    margin: 0;
+}
+.mailing .title{
+    font-size: 26px;
+}
+.mailing .suptitle{
+    font-size: 18px;
+}
+.mailing__content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    background-color: #FDFDFD;
+    padding: 40px 100px;
+    display: flex;
+    gap: 64px;
+    box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
+}
+.mailing__form {
+    width: 100%;
+    max-width: 536px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+.mailing__form > p{
+    color: #18121E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 128.571% */
+}
+.mailing__form > p a{
+    text-decoration: underline;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc(100% - 16px - 250px);
+}
+.input-wrapper span {
+    color: #18121E;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+.mailing__input {
+    color: #18121E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    background: #F3F5F4;
+    border: none;
+}
+.mailing__form .button{
+    padding: 12px 24px;
+    margin-top: 28px;
+}
+
+
+
+.footer{
+    background-color:  #1A3E3E;
+    min-height: 400px;
+}
