@@ -12,6 +12,8 @@ menuButton.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
     if(window.scrollY != 0) {
         header.classList.add("header_green")
+    } else {
+        header.classList.remove("header_green")
     }
 })
 
