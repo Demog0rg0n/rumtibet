@@ -195,7 +195,7 @@ p{
         position: fixed;
         right: -410px;
         top: 0;
-        height: 100svh;
+        height: 100dvh;
         width: 100%;
         max-width: 400px;
         padding: 15px;
@@ -223,31 +223,10 @@ p{
     .menu-button.active div:last-child{
         width: 0;
         transition-delay: 0s;
-
     }
 
     .header__navigation.opened{
         right: 0;
-    }
-}
-
-
-@keyframes menu-button-top-line {
-    0%{
-        width: 21px;
-    }
-    50%{
-        width: 0px;
-    }
-    51%{
-        width: initial;
-    }
-    100%{
-        position: absolute;
-        top: 4.5px;
-        left: 13px;
-        width: 3px;
-        height: 21px;
     }
 }
 
