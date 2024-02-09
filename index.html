@@ -7,10 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="./node_modules/air-datepicker/air-datepicker.css">
+
+    <link rel="stylesheet" href="./assets/styles/style.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <title>Rumtibet</title>
 </head>
@@ -18,7 +21,7 @@
     <header class="header">
         <div class="header__container container">
             <a href="/" class="logo">
-                <img src="/assets/images/logo.svg" alt="">
+                <img src="./assets/images/logo.svg" alt="">
             </a>
             <nav class="header__navigation">
                 <ul class="header__navigation__list">
@@ -41,8 +44,8 @@
                         <a href="">Контакты</a>
                     </li>
                 </ul>
+                <button class="header__button button">Консультация</button>
             </nav>
-            <button class="header__button button">Консультация</button>
         </div>
     </header>
     <main>
@@ -52,32 +55,29 @@
 
                 <form action="" class="main-section__form">
                     <div class="main-section__form__item">
-                        <input id="location" type="text">
-                        <div class="main-section__form__input">Локация для тура</div>
+                        <input class="main-section__form__input" autocomplete="off" id="location" type="text" placeholder="Локация для тура">
                         <span>выберите из списка</span>
                     </div>
-                    <div class="main-section__form__item">
-                        <input id="date" type="date">
-                        <div class="main-section__form__input">Дата похода</div>
+                    <div class="main-section__form__item" id="datepicker-container">
+                        <input class="main-section__form__input" autocomplete="off" type="text" id="datepicker" placeholder="Дата похода">
                         <span>укажите диапазон</span>
                     </div>
                     <div class="main-section__form__item">
-                        <input id="members" type="text">
-                        <div class="main-section__form__input">Участники</div>
+                        <input class="main-section__form__input" autocomplete="off" id="members" type="text" placeholder="Участники">
                         <span>минимум 4 человека</span>
                     </div>
                     <button class="main-section__form__button button">Найти программу</button>
                 </form>
-
+                <button class="button" id="programm__button">Найти программу</button>
             </div>
         </section>
         <section class="about-hike">
             <div class="container">
                 <div class="about-hike__media">
-                    <img src="/assets/images/about-hike-img.jpg" alt="" class="about-hike__img">
+                    <img src="./assets/images/about-hike-img.jpg" alt="" class="about-hike__img">
                     <div class="video-wrapper">
-                        <video class="about-hike__video" poster="/assets/images/about-hike-video-preview.jpg">
-                            <source src="/assets/images/hike.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <video class="about-hike__video">
+                            <source src="./assets/images/hike.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                         </video>
                     </div>
                 </div>
@@ -97,21 +97,21 @@
                     <p>Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.</p>
                     <ul class="programs__list">
                         <li>
-                            <img src="/assets/images/programm-icon.svg" alt="">
+                            <img src="./assets/images/programm-icon.svg" alt="">
                             <div>
                                 <h3>Опытный гид</h3>
                                 <span>Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</span>
                             </div>
                         </li>
                         <li>
-                            <img src="/assets/images/programm-icon2.svg" alt="">
+                            <img src="./assets/images/programm-icon2.svg" alt="">
                             <div>
                                 <h3>Безопасный поход</h3>
                                 <span>Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</span>
                             </div>
                         </li>
                         <li>
-                            <img src="/assets/images/programm-icon3.svg" alt="">
+                            <img src="./assets/images/programm-icon3.svg" alt="">
                             <div>
                                 <h3>Лояльные цены</h3>
                                 <span>Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</span>
@@ -121,7 +121,7 @@
 
                     <a href="#" class="programs__button button">Стоимость программ</a>
                 </div>
-                <img src="/assets/images/programs.png" alt="" class="programs__img">
+                <img src="./assets/images/programs.png" alt="" class="programs__img">
 
 
             </div>
@@ -134,7 +134,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="popular__item">
-                                <img src="/assets/images/popular1.jpg" alt="" class="popular__item__bg">
+                                <img src="./assets/images/popular1.jpg" alt="" class="popular__item__bg">
                                 <div class="popular__item__info">
                                     <div>
                                         <h3>Озеро возле гор</h3>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="popular__item">
-                                <img src="/assets/images/popular2.jpg" alt="" class="popular__item__bg">
+                                <img src="./assets/images/popular2.jpg" alt="" class="popular__item__bg">
                                 <div class="popular__item__info">
                                     <div>
                                         <h3>Ночь в горах</h3>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="popular__item">
-                                <img src="/assets/images/popular3.jpg" alt="" class="popular__item__bg">
+                                <img src="./assets/images/popular3.jpg" alt="" class="popular__item__bg">
                                 <div class="popular__item__info">
                                     <div>
                                         <h3>Йога в горах</h3>
@@ -185,7 +185,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="blog__item">
-                                <img src="/assets/images/blog-item-img1.jpg" alt="" class="blog__item__img">
+                                <img src="./assets/images/blog-item-img1.jpg" alt="" class="blog__item__img">
                                 <div class="blog__item__text">
                                     <h3>Красивая Италия, какая она в реальности?</h3>
                                     <p>Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации. Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</p>
@@ -198,7 +198,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="blog__item">
-                                <img src="/assets/images/blog-item-img2.jpg" alt="" class="blog__item__img">
+                                <img src="./assets/images/blog-item-img2.jpg" alt="" class="blog__item__img">
                                 <div class="blog__item__text">
                                     <h3>Для современного мира базовый.</h3>
                                     <p>Для современного мира базовый вектор развития предполагает.</p>
@@ -211,7 +211,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="blog__item">
-                                <img src="/assets/images/blog-item-img3.jpg" alt="" class="blog__item__img">
+                                <img src="./assets/images/blog-item-img3.jpg" alt="" class="blog__item__img">
                                 <div class="blog__item__text">
                                     <h3>Долой сомнения! Весь мир открыт для вас!</h3>
                                     <p>Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации ...Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации</p>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="blog__item">
-                                <img src="/assets/images/blog-item-img4.jpg" alt="" class="blog__item__img">
+                                <img src="./assets/images/blog-item-img4.jpg" alt="" class="blog__item__img">
                                 <div class="blog__item__text">
                                     <h3>Индия ... летим?</h3>
                                     <p>Для современного мира базовый.</p>
@@ -247,12 +247,12 @@
                 <h2 class="title tac">Делимся впечатлениями</h2>
 
                 <div class="impressions__items">
-                    <img src="/assets/images/photo1.jpg" alt="" class="impressions__item">
-                    <img src="/assets/images/photo2.jpg" alt="" class="impressions__item">
-                    <img src="/assets/images/photo3.jpg" alt="" class="impressions__item">
-                    <img src="/assets/images/photo4.jpg" alt="" class="impressions__item">
-                    <img src="/assets/images/photo5.jpg" alt="" class="impressions__item">
-                    <img src="/assets/images/photo6.jpg" alt="" class="impressions__item">
+                    <img src="./assets/images/photo1.jpg" alt="" class="impressions__item">
+                    <img src="./assets/images/photo2.jpg" alt="" class="impressions__item">
+                    <img src="./assets/images/photo3.jpg" alt="" class="impressions__item">
+                    <img src="./assets/images/photo4.jpg" alt="" class="impressions__item">
+                    <img src="./assets/images/photo5.jpg" alt="" class="impressions__item">
+                    <img src="./assets/images/photo6.jpg" alt="" class="impressions__item">
                 </div>
 
                 <a href="" class="button center-button">Наш pinterest</a>
@@ -276,11 +276,125 @@
         </section>
     </main>
     <footer class="footer">
+        <div class="footer__top container">
+            <div class="footer__main">
+                <h3>Компания «РумТибет»</h3>
+                <p>Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.</p>
+                <div class="footer__contacts">
+                    <a href="mailto: info@domain.com">info@domain.com</a>
+                    <a href="tel:+7 (123) 456-78-90">+7 (123) 456-78-90</a>
+                </div>
+                <ul class="footer__social">
+                    <li>
+                        <a href="/">
+                            <img src="./assets/images/social/telegram.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="./assets/images/social/vk.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="./assets/images/social/skype.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="./assets/images/social/pinterest.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__links-wrapper">
+                <div class="footer__links">
+                    <h3>Наши услуги</h3>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Прогулки в горы летом</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Зимние походы в горы</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Посещение храмов в горах</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Экстремальные виды туризма</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Походы в джунглях Амазонии</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Поездка в Африку</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__links">
+                    <h3>Важно для путешествий</h3>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Как собрать в долгий поход?</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Жизненно важные предметы для похода</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Медицинская страховка, гарантии безопасности</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                                <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+                            </svg>
+                            <a href="">Если вы врач - загляните сюда</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <span>ИП Константинопольский К.К., 2023</span>
+                <a href="">Политика обработки персональных данных</a>
+            </div>
+        </div>
 
     </footer>
 
-    <script src="/assets/scripts/video.js"></script>
-    <script src="/assets/scripts/swiper.js"></script>
+    <script src="./assets/scripts/video.js"></script>
+    <script src="./assets/scripts/swiper.js"></script>
+    <script src="./node_modules/air-datepicker/air-datepicker.js"></script>
+    <script src="./assets/scripts/customSelect.js"></script>
 
 </body>
 </html>
