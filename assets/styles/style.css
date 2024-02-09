@@ -10,6 +10,9 @@ body{
     font-weight: 700;
     font-size: 16px;
 }
+.overflow-hidden{
+    overflow: hidden;
+}
 input:focus{
     outline: none;
 }
@@ -94,13 +97,17 @@ p{
 
 
 .header{
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     padding-top: 16px;
+    padding-bottom: 6px;
     top: 0px;
     width: 100%;
     z-index: 100;
+}
+.header_green{
+    background-color: #1A3E3E;
 }
 .header__container{
     display: flex;
@@ -120,36 +127,128 @@ p{
 .header__button{
     padding: 12px 24px;
 }
+.menu-button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5px;
+    align-items: flex-end;
+    display: none;
+    padding: 6px 4.5px;
+    position: relative;
+    transition: .2s linear;
+    transition-delay: .3s;
+    z-index: 101;
+}
+.menu-button.active{
+    transform: rotate(45deg);
+}
+.menu-button::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    left: 13px;
+    top: 4.5px;
+    transition: .15s linear;
+}
+.menu-button.active::before {
+    height: 21px;
+    transition-delay: .15s;
+}
+.menu-button div{
+    width: 21px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: .15s linear;
+    transition-delay: .15s;
+}
+.menu-button div:first-child{
+    align-self: flex-start;
+}
+.menu-button div:last-child{
+    width: 12px;
+    height: 3px;
+    background-color: #fff;
+    align-self: flex-end;
+}
 
 @media (max-width: 1060px) {
-    /* .header__navigation{
+    .logo img{
+        width: 84px;
+    }
+    .header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-button{
+        display: flex;
+    }
+    .header__navigation{
         position: fixed;
-        right: 0;
+        right: -410px;
         top: 0;
-        height: 100dvh;
+        height: 100svh;
         width: 100%;
         max-width: 400px;
         padding: 15px;
+        padding-top: 85px;
         background-color: #1A3E3E;
         flex-direction: column;
         z-index: 100;
-        align-items: flex-end;
         gap: 30px;
+        transition: .1s linear;
+        align-items: flex-start;
     }
     .header__navigation__list{
         flex-direction: column;
-        align-items: flex-end;
     }
     .header__button{
         background-color: #fff;
         color: #18121E;
+    }
 
-    } */
-    .header__navigation{
-        display: none;
+    .menu-button.active div:first-child{
+        width: 0;
+        align-self: flex-start;
+        transition-delay: 0s;
+    }
+    .menu-button.active div:last-child{
+        width: 0;
+        transition-delay: 0s;
+
+    }
+
+    .header__navigation.opened{
+        right: 0;
     }
 }
 
+
+@keyframes menu-button-top-line {
+    0%{
+        width: 21px;
+    }
+    50%{
+        width: 0px;
+    }
+    51%{
+        width: initial;
+    }
+    100%{
+        position: absolute;
+        top: 4.5px;
+        left: 13px;
+        width: 3px;
+        height: 21px;
+    }
+}
 
 
 
@@ -247,7 +346,7 @@ p{
     }
     .main-section .container{
         height: 100vh;
-        height: 100dvh;
+        height: 100svh;
         min-height: initial;
     }
 }
@@ -691,6 +790,7 @@ p{
         flex-direction: row;
         overflow: scroll;
         width: calc(100vw - 16px);
+        padding-right: 16px;
     }
     .impressions__item{
         width: 280px;
