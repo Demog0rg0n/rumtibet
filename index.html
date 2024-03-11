@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./node_modules/air-datepicker/air-datepicker.css">
+    <link rel="stylesheet" href="./assets/scripts/custom-datepicker/air-datepicker.css">
 
     <link rel="stylesheet" href="./assets/styles/style.css">
 
@@ -58,22 +58,24 @@
             <div class="container">
                 <h1 class="main-section__title">Насладись прогулкой в горах с командой единомышленников</h1>
 
-                <form action="" class="main-section__form">
-                    <div class="main-section__form__item">
-                        <input class="main-section__form__input" autocomplete="off" id="location" type="text" placeholder="Локация для тура">
-                        <span>выберите из списка</span>
-                    </div>
-                    <div class="main-section__form__item" id="datepicker-container">
-                        <input class="main-section__form__input" autocomplete="off" type="text" id="datepicker" placeholder="Дата похода">
-                        <span>укажите диапазон</span>
-                    </div>
-                    <div class="main-section__form__item">
-                        <input class="main-section__form__input" autocomplete="off" id="members" type="text" placeholder="Участники">
-                        <span>минимум 4 человека</span>
-                    </div>
-                    <button class="main-section__form__button button">Найти программу</button>
-                </form>
-                <button class="button" id="programm__button">Найти программу</button>
+                <div class="popup-wrapper _closed">
+                    <form action="" class="main-section__form popup">
+                        <div class="main-section__form__item">
+                            <input class="main-section__form__input" autocomplete="off" id="location" type="text" placeholder="Локация для тура">
+                            <span>выберите из списка</span>
+                        </div>
+                        <div class="main-section__form__item" id="datepicker-container">
+                            <input class="main-section__form__input" autocomplete="off" type="text" id="datepicker" placeholder="Дата похода">
+                            <span>укажите диапазон</span>
+                        </div>
+                        <div class="main-section__form__item">
+                            <input class="main-section__form__input" autocomplete="off" id="members" type="text" placeholder="Участники">
+                            <span>минимум 4 человека</span>
+                        </div>
+                        <button class="main-section__form__button button close-popup">Найти программу</button>
+                    </form>
+                </div>
+                <button class="button open-popup" id="programm__button">Найти программу</button>
             </div>
         </section>
         <section class="about-hike">
@@ -398,9 +400,10 @@
 
     <script src="./assets/scripts/video.js"></script>
     <script src="./assets/scripts/swiper.js"></script>
-    <script src="./node_modules/air-datepicker/air-datepicker.js"></script>
+    <script src="./assets/scripts/custom-datepicker/air-datepicker.js"></script>
     <script src="./assets/scripts/customSelect.js"></script>
     <script src="./assets/scripts/header.js"></script>
+    <script src="./assets/scripts/popup.js"></script>
 
 </body>
 </html>

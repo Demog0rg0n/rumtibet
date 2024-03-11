@@ -179,6 +179,7 @@ p{
     align-self: flex-end;
 }
 
+
 @media (max-width: 1060px) {
     .logo img{
         width: 84px;
@@ -214,7 +215,6 @@ p{
         background-color: #fff;
         color: #18121E;
     }
-
     .menu-button.active div:first-child{
         width: 0;
         align-self: flex-start;
@@ -224,7 +224,6 @@ p{
         width: 0;
         transition-delay: 0s;
     }
-
     .header__navigation.opened{
         right: 0;
     }
@@ -265,8 +264,6 @@ p{
     background: rgba(255, 255, 255, 0.20);
     backdrop-filter: blur(3px);
     padding: 40px 42px;
-}
-.main-section__form{
     display: flex;
     gap: 24px;
 }
@@ -318,16 +315,64 @@ p{
 }
 
 @media (max-width: 650px) {
+    .main-section__form{
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+    .main-section__form__item{
+        width: 100%;
+    }
+    .main-section__form__button{
+        width: 100%;
+    }
+    .popup-wrapper{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 102;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 20px;
+        transition: .2s linear;
+    }
+    ._closed{
+        visibility: hidden;
+    }
+    ._opened{
+        display: flex;
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .popup{
+        opacity: 0;
+        position: relative;
+        top: 20px;
+        transition: .2s;
+        background-color: #1A3E3E;
+    }
+    ._opened .popup{
+        opacity: 1;
+        top: 0;
+    }
     #programm__button{
         display: inline-block;
     }
-    .main-section__form{
-        display: none;
-    }
+
     .main-section .container{
         height: 100vh;
         height: 100svh;
         min-height: initial;
+    }
+
+    @keyframes popup-animation {
+        0%{
+
+        }
     }
 }
 
